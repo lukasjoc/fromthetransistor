@@ -6,11 +6,11 @@ To undestand this understand Ohm's Law
 - V = I * R
 - and the Current is I = V/R || I = P/R if P is known
 
-Diode (p-type conductor + n-type conductor):
+The Diode:
 ===
 - Barebone building blocks of (IC's)
 - Conduct electrical signal in one direction (forward direction) through the conductor
-- Conducts using [https://en.wikipedia.org/wiki/P%E2%80%93n_junction](pn-junction)
+- Conducts using (https://en.wikipedia.org/wiki/P%E2%80%93n_junction)[pn-junction]
 
 Forward Voltage (FV):
 - voltage where the diod starts to fully conduct within it's rating
@@ -25,7 +25,7 @@ Common Materials(Conductors):
 - Silicon (Si) (most commonly used)
 - Germanium (Ge) (Seldomly used; Takes lower input voltage and sometimes also has advantages over Si)
 
-Transistor:
+The Transistor:
 ===
 - Amplifying or **switching** electrical signals (current power in an EC)
 - I want my input current to go up
@@ -38,9 +38,9 @@ Transistor:
 
 Marterials (Semiconductors):
 - We need some doping element to create the following special semiconductor materials:
-  - [https://circuitglobe.com/p-type-semiconductor.html](p-type) (a lot of holes, less amount of electrons, lower conductivity, nh >> ne)
-  - [https://circuitglobe.com/n-type-semiconductor.html](n-type) (lesser holes, a lot of electrons, higher conductivity ne >> nh)
-  - The [https://circuitglobe.com/difference-between-p-type-and-n-type-semiconductor.html](Difference) is in the amount if holes vs electrons
+  - (https://circuitglobe.com/p-type-semiconductor.html)[p-type] (a lot of holes, less amount of electrons, lower conductivity, nh >> ne)
+  - (https://circuitglobe.com/n-type-semiconductor.html)[n-type] (lesser holes, a lot of electrons, higher conductivity ne >> nh)
+  - The (https://circuitglobe.com/difference-between-p-type-and-n-type-semiconductor.html)[Difference] is in the amount if holes vs electrons
 
 Ways of operation:
 - Saturation -- Free flow from C->E like a [https://en.wikipedia.org/wiki/Short_circuit](Short Circuit)
