@@ -40,7 +40,7 @@ Marterials (Semiconductors):
 - We need some doping element to create the following special semiconductor materials:
   - [p-type](https://circuitglobe.com/p-type-semiconductor.html) (a lot of holes, less amount of electrons, lower conductivity, nh >> ne)
   - [n-type](https://circuitglobe.com/n-type-semiconductor.html) (lesser holes, a lot of electrons, higher conductivity ne >> nh)
-  - The (https://circuitglobe.com/difference-between-p-type-and-n-type-semiconductor.html)[Difference] is in the amount if holes vs electrons
+  - The [difference](https://circuitglobe.com/difference-between-p-type-and-n-type-semiconductor.html) is in the amount if holes vs electrons
 
 Ways of operation:
 - Saturation -- Free flow from C to E like a [SC](https://en.wikipedia.org/wiki/Short_circuit)
@@ -98,6 +98,6 @@ IC (Integrated Circuit):
 Some Research Links:
 ===
 - [Why can't two series-connected diodes act as a BJT?](https://electronics.stackexchange.com/questions/78366/why-cant-two-series-connected-diodes-act-as-a-bjt#:~:text=A%20PNP%20BJT%20will%20function,the%20other%20through%20the%20wire.)
-- [s,p,d,f Orbitals](https://socratic.org/chemistry/the-electron-configuration-of-atoms/arrangement-of-electrons-in-orbitals-spd-and-f](s,p,d,f Orbitals)
+- [s,p,d,f Orbitals](https://socratic.org/chemistry/the-electron-configuration-of-atoms/arrangement-of-electrons-in-orbitals-spd-and-f)
 - [Ge vs. Si](https://www.differencebetween.com/difference-between-silicon-and-vs-germanium/)
 
