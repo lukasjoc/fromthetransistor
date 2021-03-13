@@ -10,7 +10,7 @@ The Diode:
 ===
 - Barebone building blocks of (IC's)
 - Conduct electrical signal in one direction (forward direction) through the conductor
-- Conducts using (https://en.wikipedia.org/wiki/P%E2%80%93n_junction)[pn-junction]
+- Conducts using [pn-junction](https://en.wikipedia.org/wiki/P%E2%80%93n_junction)
 
 Forward Voltage (FV):
 - voltage where the diod starts to fully conduct within it's rating
@@ -38,55 +38,58 @@ The Transistor:
 
 Marterials (Semiconductors):
 - We need some doping element to create the following special semiconductor materials:
-  - (https://circuitglobe.com/p-type-semiconductor.html)[p-type] (a lot of holes, less amount of electrons, lower conductivity, nh >> ne)
-  - (https://circuitglobe.com/n-type-semiconductor.html)[n-type] (lesser holes, a lot of electrons, higher conductivity ne >> nh)
+  - [p-type](https://circuitglobe.com/p-type-semiconductor.html) (a lot of holes, less amount of electrons, lower conductivity, nh >> ne)
+  - [n-type](https://circuitglobe.com/n-type-semiconductor.html) (lesser holes, a lot of electrons, higher conductivity ne >> nh)
   - The (https://circuitglobe.com/difference-between-p-type-and-n-type-semiconductor.html)[Difference] is in the amount if holes vs electrons
 
 Ways of operation:
-- Saturation -- Free flow from C->E like a [https://en.wikipedia.org/wiki/Short_circuit](Short Circuit)
-- Cut-off -- Turn of flow like an [https://en.wikipedia.org/wiki/Open-circuit_voltage](Open Circuit)
-- Active -- Proportional Current form C-E like flow into B (Usually what you want)
-- Reverse-Active Proportional from Base flow from E-C (Not really nice)
+- Saturation -- Free flow from C to E like a [SC](https://en.wikipedia.org/wiki/Short_circuit)
+- Cut-off -- Turn of flow like an [OC](https://en.wikipedia.org/wiki/Open-circuit_voltage)
+- Active -- Proportional Current form C to E like flow into B (Usually what you want)
+- Reverse-Active -- Proportional from Base flow from E to C (Not really nice)
 
 Bipolar junction transistor (BJT):
+- Terminals:
+  - Emitter(E) (n-type, diode)
+  - Collector(C) (n-type, diode)
+  - Base (B) (p-type)
 
-Terminals:
-- Emitter(E) (n-type, diode)
-- Collector(C) (n-type, diode)
-- Base (B) (p-type)
+- Emitter:
+  - Suply majority of charge
+  - Forward Bias Connection (to be able to emit)
 
-Emitter:
-- Suply majority of charge
-- Forward Bias Connection (to be able to emit)
-
-Collector:
-- Collect majority of charge
-- Reverse Bias Connection (to be able to collect)
+- Collector:
+  - Collect majority of charge
+  - Reverse Bias Connection (to be able to collect)
 
 Base:
-- input circuit to E as forward bias
-- output circuit to C as reverse bias
+  - input circuit to E as forward bias
+  - output circuit to C as reverse bias
 
 Flow of BJT(NPN,PNP) Transistors:
 ```
-NPN Transistor:
-         E   C
- Flow to E \ /
-            |
-           Base(B)
-
-------------------------------
-PNP Transistor:
-         E   C
- Flow to B \ /
-            |
-           Base(B)
+  NPN Transistor:
+           E   C
+   Flow to E \ /
+              |
+             Base(B)
+  
+  ------------------------------
+  PNP Transistor:
+           E   C
+   Flow to B \ /
+              |
+             Base(B)
 ```
 
 Metal-Oxide Field-effect transistor (MOSFET)
   - ??
 
-<!-- TODO: know more about IC's -->
+<!--
+  - TODO: know more about IC's
+  - TODO: learn about MOSFETS and when to use BJT's over MOSFETS
+-->
+
 IC (Integrated Circuit):
 ===
 - bunch of interconnected transistors, resistors or capacitors put together into one chip
@@ -94,6 +97,7 @@ IC (Integrated Circuit):
 
 Some Research Links:
 ===
-- [https://electronics.stackexchange.com/questions/78366/why-cant-two-series-connected-diodes-act-as-a-bjt#:~:text=A%20PNP%20BJT%20will%20function,the%20other%20through%20the%20wire.](Why can't two series-connected diodes act as a BJT?)
-- [https://socratic.org/chemistry/the-electron-configuration-of-atoms/arrangement-of-electrons-in-orbitals-spd-and-f](s,p,d,f Orbitals)
-- [https://www.differencebetween.com/difference-between-silicon-and-vs-germanium/](Ge vs. Si)
+- [Why can't two series-connected diodes act as a BJT?](https://electronics.stackexchange.com/questions/78366/why-cant-two-series-connected-diodes-act-as-a-bjt#:~:text=A%20PNP%20BJT%20will%20function,the%20other%20through%20the%20wire.)
+- [s,p,d,f Orbitals](https://socratic.org/chemistry/the-electron-configuration-of-atoms/arrangement-of-electrons-in-orbitals-spd-and-f](s,p,d,f Orbitals)
+- [Ge vs. Si](https://www.differencebetween.com/difference-between-silicon-and-vs-germanium/)
+
