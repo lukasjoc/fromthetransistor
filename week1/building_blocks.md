@@ -68,7 +68,7 @@ Base:
 - output circuit to C as reverse bias
 
 Flow of BJT(NPN,PNP) Transistors:
-````
+```
 NPN Transistor:
          E   C
  Flow to E \ /
