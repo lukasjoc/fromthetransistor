@@ -5,12 +5,18 @@ Hiring is hard, a lot of modern CS education is really bad, and it's hard to fin
 Now cleaned up and going to be software only. Closer to being real.
 
 #### Section 1: Intro: Cheating our way past the transistor -- 0.5 weeks
-- So about those transistors -- Course overview. Describe how FPGAs are buildable using transistors, and that ICs are just collections of transistors in a nice reliable package. Understand the LUTs and stuff. Talk briefly about the theory of transistors, but all projects must build on each other so we can’t build one.
+- So about those transistors -- Course overview.
+  - Describe how FPGAs are buildable using transistors, and that ICs are just collections of transistors in a nice reliable package.
+  - Understand the LUTs and stuff.
+  - Talk briefly about the theory of transistors, but all projects must build on each other so we can’t build one.
 - Emulation -- Building on real hardware limits the reach of this course. Using something like Verilator will allow anyone with a computer to play.
 
 #### Section 2: Bringup: What language is hardware coded in? -- 0.5 weeks
-- Blinking an LED(Verilog, 10) -- Your first little program! Getting the simulator working. Learning Verilog.
-- Building a UART(Verilog, 100) -- An intro chapter to Verilog, copy a real UART, introducing the concept of MMIO, though the serial port may be semihosting. Serial test echo program and led control.
+- Blinking an LED(Verilog, 10) -- Your first little program!
+ - Getting the simulator working.
+ - Learning Verilog.
+- Building a UART(Verilog, 100) -- An intro chapter to Verilog, copy a real UART, introducing the concept of MMIO, though the serial port may be semihosting.
+  - Serial test echo program and led control.
 
 #### Section 3: Processor: What is a processor anyway? -- 3 weeks
 - Coding an assembler(Python, 500) -- Straightforward and boring, write in python. Happens in parallel with the CPU building. Teaches you ARM assembly. Initially outputs just binary files, but changed when you write a linker.
@@ -33,11 +39,11 @@ Now cleaned up and going to be software only. Closer to being real.
 
 #### Section 6: Browser: Coming online -- 1 week
 - Building a TCP stack(C, 500) -- Probably coded in the kernel, integrate the ethernet driver into the kernel. Add support for networking syscalls to kernel. (send, recv, bind, connect)
-- telnetd, the power of being multiprocess(C, 50) --  Written in C, user can connect multiple times with telnet. Really just a bind shell.
-- Space saving dynamic linking(C, 300) -- Because we can, explain how dynamic linker is just a user space program. Changes to linker required.
-- So about that web(C, 500+) -- A “nice” text based web browser, using ANSI and terminal niceness. Dynamically linked and nice, nice as you want.
+  - telnetd, the power of being multiprocess(C, 50) --  Written in C, user can connect multiple times with telnet. Really just a bind shell.
+  - Space saving dynamic linking(C, 300) -- Because we can, explain how dynamic linker is just a user space program. Changes to linker required.
+  - So about that web(C, 500+) -- A “nice” text based web browser, using ANSI and terminal niceness. Dynamically linked and nice, nice as you want.
 
 #### Section 7: Physical: Running on real hardware -- 1 week
-- Talking to an FPGA(C, 200) -- A little code for the USB MCU to bitbang JTAG.
-- Building an FPGA board -- Board design, FPGA BGA reflow, FPGA flash, a 50mhz clock, a USB JTAG port and flasher(no special hardware, a little cypress usb mcu to do jtag), a few leds, a reset button, a serial port(USB-FTDI) also powering via USB, an sd card, expansion connector(ide cable?), and an ethernet port. Optional, expansion board, host USB port, NTSC TV out, an ISA port, and PS/2 connector on the board to taunt you. We provide a toaster oven and a multimeter thermometer to do reflow. 
-- Bringup -- Compiling and downloading the Verilog for the board
+  - Talking to an FPGA(C, 200) -- A little code for the USB MCU to bitbang JTAG.
+  - Building an FPGA board -- Board design, FPGA BGA reflow, FPGA flash, a 50mhz clock, a USB JTAG port and flasher(no special hardware, a little cypress usb mcu to do jtag), a few leds, a reset button, a serial port(USB-FTDI) also powering via USB, an sd card, expansion connector(ide cable?), and an ethernet port. Optional, expansion board, host USB port, NTSC TV out, an ISA port, and PS/2 connector on the board to taunt you. We provide a toaster oven and a multimeter thermometer to do reflow. 
+  - Bringup -- Compiling and downloading the Verilog for the board
