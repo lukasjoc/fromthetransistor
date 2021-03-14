@@ -1,6 +1,6 @@
 # About the building blocks of IC's and Transistors
 
-> Some diods and you have a transistor. Some transitors, capacitors and resistrors and you have an IC
+> Some diods and you have a transistor. Some transitors, capacitors and resistors and you have an IC
 
 To undestand this understand Ohm's Law
 - V = I * R
@@ -63,7 +63,7 @@ Bipolar junction transistor (BJT):
   - Collect majority of charge
   - Reverse Bias Connection (to be able to collect)
 
-Base:
+- Base:
   - input circuit to E as forward bias
   - output circuit to C as reverse bias
 
@@ -111,7 +111,13 @@ Flow of MOSFET
 IC (Integrated Circuit):
 ===
 - bunch of interconnected transistors, resistors or capacitors put together into one chip
-- ??
+
+Package
+ - connect with the die easily
+
+- Mounts:
+  - PTH (Through Hole)
+  - SMD (Surface Mount,those DIP's)
 
 Some Links:
 ===
@@ -120,3 +126,4 @@ Some Links:
 - [Ge vs. Si](https://www.differencebetween.com/difference-between-silicon-and-vs-germanium/)
 - [More about transistors, amplification and switching](https://learn.sparkfun.com/tutorials/transistors)
 - [Bohr Atom Model](https://aapt.scitation.org/doi/10.1119/1.5064553)
+
