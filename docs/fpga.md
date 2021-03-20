@@ -1,6 +1,5 @@
 About those Field Programmable Gate Arrays (FPGA's)
 
-
 Boolean alrebra (Basic Terms)
 - ??
 
@@ -40,7 +39,6 @@ Types:
 - T (not very common)
 
 ```
-
 D-Flip-Flop:
 
 -----|------
@@ -48,15 +46,13 @@ D-Flip-Flop:
 |D      Q -|
 |>      Q'-|
 |    R     |
------|------
 
 D: Data input
 Q: Data output
->: Clock input
+>: Clock input 0/1
 
 S: Set Pin
 R: Reset Pin
-
 ```
 
 How the Flip Flop works:
@@ -71,8 +67,8 @@ How the Flip Flop works:
   - Shift Registers
   - all that https://www.nandland.com/articles/fpga-101-fpgas-for-beginners.html
   - UART's
+  - MMIO (ALSO UPDATE WIKI ARTICLE FOR THIS IN GERMAN)
 -->
-
 
 <!-- TODO: LOOK AT THIS UNDERSTAND AND ADD LINKS-->
 Notes:
