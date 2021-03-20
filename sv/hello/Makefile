@@ -36,7 +36,7 @@ endif
 default:
 	@echo "-- Verilator hello-world simple example"
 	@echo "-- VERILATE & BUILD --------"
-	$(VERILATOR) -cc --exe --build -j hello.sv testbench.cpp
+	$(VERILATOR) -cc --exe --build -j hello.sv veri.cpp
 	@echo "-- RUN ---------------------"
 	obj_dir/VHello
 	@echo "-- DONE --------------------"

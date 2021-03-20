@@ -1,15 +1,14 @@
-// Verilator "SIMPLE" testbench
 // Include common routines
 #include <verilated.h>
 
 // Include model header, generated from Verilating
-#include "Vhello.h"
+#include "Vdff.h"
 
 int main(int argc, char** argv, char** env) {
 
   if (false && argc && argv && env) {}
 
-  Vhello * model = new Vhello;
+  Vdff * model = new Vdff;
 
   // Simulate until $finish
   while (!Verilated::gotFinish()) model->eval();

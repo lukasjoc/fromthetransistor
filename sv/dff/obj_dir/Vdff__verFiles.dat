@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-cc --exe --build -j dff.sv veri.cpp"
+S   5635664 23250365  1615919214           0  1614307774           0 "/usr/local/Cellar/verilator/4.110/bin/verilator_bin"
+S       299 23878988  1616260531           0  1616260531           0 "dff.sv"
+T      4173 23872662  1616260537           0  1616260537           0 "obj_dir/Vdff.cpp"
+T      2804 23872660  1616260537           0  1616260537           0 "obj_dir/Vdff.h"
+T      1780 23872664  1616260537           0  1616260537           0 "obj_dir/Vdff.mk"
+T      2372 23872661  1616260537           0  1616260537           0 "obj_dir/Vdff__Slow.cpp"
+T       560 23872658  1616260537           0  1616260537           0 "obj_dir/Vdff__Syms.cpp"
+T       771 23872659  1616260537           0  1616260537           0 "obj_dir/Vdff__Syms.h"
+T       274 23872665  1616260537           0  1616260537           0 "obj_dir/Vdff__ver.d"
+T         0        0  1616260537           0  1616260537           0 "obj_dir/Vdff__verFiles.dat"
+T      1580 23872663  1616260537           0  1616260537           0 "obj_dir/Vdff_classes.mk"
