@@ -43,7 +43,8 @@ module m_norgate(input i_a, i_b, output o_c);
 
 wire w_nor;
 
-assign w_nor = ~(i_a | i_b);
+assign w_nor = i_a ~| i_b;
+
 assign o_c = w_nor;
 
 initial begin
