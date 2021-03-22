@@ -24,7 +24,9 @@ VL_MODULE(Vdff) {
     // propagate new values into/out from the Verilated model.
     VL_IN8(r,0,0);
     VL_IN8(clk,0,0);
-    VL_IN8(d,0,0);
+    VL_IN8(i_1,0,0);
+    VL_IN8(i_2,0,0);
+    VL_OUT8(q1,0,0);
     VL_OUT8(q,0,0);
     VL_OUT8(invq,0,0);
     
@@ -77,7 +79,8 @@ VL_MODULE(Vdff) {
     static void _eval_settle(Vdff__Syms* __restrict vlSymsp) VL_ATTR_COLD;
     static void _initial__TOP__1(Vdff__Syms* __restrict vlSymsp) VL_ATTR_COLD;
     static void _sequent__TOP__2(Vdff__Syms* __restrict vlSymsp);
-    static void _settle__TOP__3(Vdff__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+    static void _sequent__TOP__3(Vdff__Syms* __restrict vlSymsp);
+    static void _settle__TOP__4(Vdff__Syms* __restrict vlSymsp) VL_ATTR_COLD;
 } VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);
 
 //----------

@@ -30,7 +30,7 @@ void Vdff::eval_step() {
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("dff.sv", 13, "",
+            VL_FATAL_MT("dff.sv", 27, "",
                 "Verilated model didn't converge\n"
                 "- See DIDNOTCONVERGE in the Verilator manual");
         } else {
@@ -55,7 +55,7 @@ void Vdff::_eval_initial_loop(Vdff__Syms* __restrict vlSymsp) {
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("dff.sv", 13, "",
+            VL_FATAL_MT("dff.sv", 27, "",
                 "Verilated model didn't DC converge\n"
                 "- See DIDNOTCONVERGE in the Verilator manual");
         } else {
@@ -68,7 +68,17 @@ VL_INLINE_OPT void Vdff::_sequent__TOP__2(Vdff__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vdff::_sequent__TOP__2\n"); );
     Vdff* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    vlTOPp->q = ((IData)(vlTOPp->r) & (IData)(vlTOPp->d));
+    vlTOPp->q1 = (1U & ((IData)(vlTOPp->i_1) ? ((~ (IData)(vlTOPp->i_2)) 
+                                                | (~ (IData)(vlTOPp->q1)))
+                         : ((~ (IData)(vlTOPp->i_2)) 
+                            & (IData)(vlTOPp->q1))));
+}
+
+VL_INLINE_OPT void Vdff::_sequent__TOP__3(Vdff__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vdff::_sequent__TOP__3\n"); );
+    Vdff* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->q = ((IData)(vlTOPp->r) & (IData)(vlTOPp->i_1));
     vlTOPp->invq = (1U & (~ (IData)(vlTOPp->q)));
 }
 
@@ -76,9 +86,12 @@ void Vdff::_eval(Vdff__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vdff::_eval\n"); );
     Vdff* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
+    if (((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk)))) {
+        vlTOPp->_sequent__TOP__2(vlSymsp);
+    }
     if ((((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk))) 
          | ((~ (IData)(vlTOPp->r)) & (IData)(vlTOPp->__Vclklast__TOP__r)))) {
-        vlTOPp->_sequent__TOP__2(vlSymsp);
+        vlTOPp->_sequent__TOP__3(vlSymsp);
     }
     // Final
     vlTOPp->__Vclklast__TOP__clk = vlTOPp->clk;
@@ -105,8 +118,10 @@ VL_INLINE_OPT QData Vdff::_change_request_1(Vdff__Syms* __restrict vlSymsp) {
 void Vdff::_eval_debug_assertions() {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vdff::_eval_debug_assertions\n"); );
     // Body
-    if (VL_UNLIKELY((d & 0xfeU))) {
-        Verilated::overWidthError("d");}
+    if (VL_UNLIKELY((i_1 & 0xfeU))) {
+        Verilated::overWidthError("i_1");}
+    if (VL_UNLIKELY((i_2 & 0xfeU))) {
+        Verilated::overWidthError("i_2");}
     if (VL_UNLIKELY((r & 0xfeU))) {
         Verilated::overWidthError("r");}
     if (VL_UNLIKELY((clk & 0xfeU))) {

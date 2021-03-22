@@ -34,11 +34,12 @@ void Vdff::_initial__TOP__1(Vdff__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vdff::_initial__TOP__1\n"); );
     Vdff* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    VL_FINISH_MT("dff.sv", 15, "");
+    VL_FINISH_MT("dff.sv", 30, "");
+    VL_WRITEF("D-Risnig_cLK Register working\nJK Register working\n");
 }
 
-void Vdff::_settle__TOP__3(Vdff__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vdff::_settle__TOP__3\n"); );
+void Vdff::_settle__TOP__4(Vdff__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vdff::_settle__TOP__4\n"); );
     Vdff* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->invq = (1U & (~ (IData)(vlTOPp->q)));
@@ -64,15 +65,17 @@ void Vdff::_eval_settle(Vdff__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vdff::_eval_settle\n"); );
     Vdff* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    vlTOPp->_settle__TOP__3(vlSymsp);
+    vlTOPp->_settle__TOP__4(vlSymsp);
 }
 
 void Vdff::_ctor_var_reset() {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vdff::_ctor_var_reset\n"); );
     // Body
-    d = VL_RAND_RESET_I(1);
+    i_1 = VL_RAND_RESET_I(1);
+    i_2 = VL_RAND_RESET_I(1);
     r = VL_RAND_RESET_I(1);
     clk = VL_RAND_RESET_I(1);
+    q1 = VL_RAND_RESET_I(1);
     q = VL_RAND_RESET_I(1);
     invq = VL_RAND_RESET_I(1);
 }
