@@ -34,7 +34,7 @@ void Vtop::_initial__TOP__1(Vtop__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop::_initial__TOP__1\n"); );
     Vtop* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    VL_FINISH_MT("top.sv", 8, "");
+    VL_FINISH_MT("top.sv", 10, "");
     VL_WRITEF("AND gate working\nOR gate working\nNOR gate working\n");
 }
 

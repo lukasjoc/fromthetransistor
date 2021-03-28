@@ -1,9 +1,10 @@
 // simple and gate
 module top(input i_a, i_b, output o_c);
 
-m_andgate mymandgate(i_a, i_b, o_c);
-m_orgate mymorgate(i_a, i_b, o_c);
-m_norgate mymnorgate(i_a, i_b, o_c);
+// m_andgate mymandgate(i_a, i_b, o_c);
+m_andgate mymandgate(.i_a(i_a), .i_b(i_b), .o_c(o_c));
+m_orgate.mymorgate(.i_a(i_a), .i_b(i_b), .o_c(o_c));
+m_norgate.mymnorgate(.i_a(i_a), .i_b(i_b), .o_c(o_c));
 
 initial $finish;
 
