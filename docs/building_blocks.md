@@ -6,6 +6,14 @@ To undestand this understand Ohm's Law
 - V = I * R
 - and the Current is I = V/R || I = P/R if P is known
 
+About those Atoms:
+===
+- Atoms remain bound together by forces of attraction between an atom’s nucleus and electrons in its outer shell.
+  When influenced by voltage, atoms in a circuit begin to reform and their components exert a potential
+  of attraction known as a potential difference. Mutually attracted loose electrons move toward protons, creating
+  a flow of electrons (current).
+  Any material in the circuit that restricts this flow is considered resistance.
+
 The Diode:
 ===
 - Barebone building blocks of (IC's)
