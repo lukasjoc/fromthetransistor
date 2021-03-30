@@ -3,7 +3,7 @@ About those Field Programmable Gate Arrays (FPGA's)
 Boolean alrebra (Basic Gates)
 ---
 
-Most definite basic internal components:
+Most definite basic internal components:G
 - LUT's,
 - Flip-Flops
 - some form of oscillator to produce a stable central clock
@@ -67,13 +67,8 @@ and we compute more stuff
 - to compute more complex equations we combine LUT's
 - an fpga will probably use tousands of LUT's to do boolean algebra
 
-- think about it:
-- a 3 input LUT can make 2^3=8 logical equations
-- a 5 input LUT can make 2^5=32 logical equations
-
 Flip Flop(Register):
-
-2 state devices that control sequential logic
+- 2 state devices that control sequential logic
 
 Types:
 - D (most common)
