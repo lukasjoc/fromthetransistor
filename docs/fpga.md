@@ -19,7 +19,8 @@ Metastability:
 - ahh setup/hold time violations.. what??
 
 Setup/ Hold Time:
-- ?
+- the time before a clock edge for an inout to be stable again
+- the time after the clock edge for an input to be stable again
 
 The concept Clock in a synchronous  (Ckl)
 - we use an oscilliator which is device that creates swings
@@ -29,10 +30,13 @@ The concept Clock in a synchronous  (Ckl)
 
 Clock Domain(CD)
 - each clock forms a clock domain (CD)
-- thats's easy but we are talking about how to get from one clock to another (Crossing CD's)?
+- thats's easy but we are talking about how to get from one clock to another (Crossing CD's)
+  and not suffer to much from metastibility?
 
-Crossing CD's:
-- ?
+Ways to "Crossing Clock Domains":
+- slow to fast -> faster clock with douoble-flopping the data
+- fast to slow -> stretch clock pulses
+- best way -> use fifo with dual clock support, and flags for almost full/emty
 
 Look Up Tables (LUTS)
 - Basically just provide the boolean algebra computation
@@ -148,23 +152,42 @@ Rd Data <-  -> Rd Data
 
 ```
 
-
-
 Where to use them?
 - 8B/10B encoding for HDMI etc
 - FIFOS which you want to use when you deliver buffered data from Point A to B
 
-<!-- Understrand:
-  - Setup and hold time
-  - Ways to cross clock domains
-  - when there is just one synchonous clockl why are then there more clock domains?
-  - FIFOS
+FIFOS:
+- act in First in First out principle (very similar to queues in c  and so on)
+
+```
+Write        Read
+  Wr En ->  <- rd end
+Wr Data ->  -> rd Data
+fifo full <-  -> fifo_emty
+
+Fifo underflow
+ - never read from emty fifo
+
+Fifo overflow
+- never write to full fifo
+```
+When to use them?
+- buffer data to one place from another
+- hdmi stuff
+- in combinatination with BRAM's to encode/decode
+- controllers to send data
+- JTAG etc
+- crossing  clock domains
+- DRAM/SRAM/Flash
+
+<!-- TODO:
   - all that https://www.nandland.com/articles/fpga-101-fpgas-for-beginners.html
   - MMIO (ALSO UPDATE WIKI ARTICLE FOR THIS IN GERMAN)
+  - De Morgans Law
+  - Karnaugh Maps
+  - The Quine-McCluskey method
 -->
 
-
-<!-- TODO: LOOK AT THIS UNDERSTAND AND ADD LINKS-->
 Links:
 - [Flip- Flop](http://hyperphysics.phy-astr.gsu.edu/hbase/Electronic//flipflop.html)
 - De Morgan's Law
