@@ -1,9 +1,7 @@
 About those Field Programmable Gate Arrays (FPGA's)
 
-Boolean alrebra (Basic Gates)
+Most definite basic internal components
 ---
-
-Most definite basic internal components:G
 - LUT's,
 - Flip-Flops
 - some form of oscillator to produce a stable central clock
@@ -11,24 +9,29 @@ Most definite basic internal components:G
 - etc
 
 Logic types in an fpga or any **oscilliated** circuit
+---
 - Combinatorial (single State logic, takes present state into account eg. 3-input LUT(8LA))
 - Sequential Logic (Two State logic takes past and present states into account eg. d-ff)
 
 Metastability:
+---
 - "metastable" unknown/non-deterministic output from flip flop  (so no clue if 1 or 0 mmh shit... but why)
 - ahh setup/hold time violations.. what??
 
-Setup/ Hold Time:
-- the time before a clock edge for an inout to be stable again
-- the time after the clock edge for an input to be stable again
+Setup/Hold Time:
+---
+- T(su) the time before a clock edge for an inout to be stable again
+- T(h) the time after the clock edge for an input to be stable again
 
 The concept Clock in a synchronous  (Ckl)
+---
 - we use an oscilliator which is device that creates swings
  - this mainly using quartz and so on to create swings
 - steady stream of low to high to low voltage is made available from this quartz crystal
 - the faster the clock the faster the design will run
 
 Clock Domain(CD)
+---
 - each clock forms a clock domain (CD)
 - thats's easy but we are talking about how to get from one clock to another (Crossing CD's)
   and not suffer to much from metastibility?
@@ -39,6 +42,7 @@ Ways to "Crossing Clock Domains":
 - best way -> use fifo with dual clock support, and flags for almost full/emty
 
 Look Up Tables (LUTS)
+---
 - Basically just provide the boolean algebra computation
 
 ```
@@ -68,6 +72,7 @@ and we compute more stuff
 - an fpga will probably use tousands of LUT's to do boolean algebra
 
 Flip Flop(Register):
+---
 - 2 state devices that control sequential logic
 
 Types:
@@ -93,15 +98,18 @@ R: Reset Pin
 ```
 
 How the Flip Flop works:
+---
 - input comes in with rising clock cycling
 - output recognizes this and copyes the value to the output
 - when done it 'registeres' it
 
 Synthesizable(A) vs. Non-Synthesizable Code(B):
+---
 - A can be directly synthesized to run on an fpga device
 - B cannot be directly synthesized to run on an fpga device (e. g. delays in test benches)
 
 Shift Registers:
+---
 - multiple flilflops connected together to store multiple bits of data
 
 - Types (really self explanatory)
@@ -111,17 +119,21 @@ Shift Registers:
 - parallel in parallel out (PIPO)
 
 Shift Register Counters
+---
 - Ring Counter (connected outputs until last connected to first like a ring)
 - Johnson Counter/ Twisted Ring (outputs are connected and the last is inverted to the front)
 
 Latches:
+---
  - unclocked flipflop (dont use them)
 
 RAM Types Commonly used
+---
 - BRAM (block ram)
 - SRAM (static RAM, ddr3 etc)
 
 BRAM(Block Ram):
+---
 - its inside the fpga
 - at read at clk posedge from Addr while Wr_End is not active
 - can only read one value per clock cycle
@@ -152,6 +164,7 @@ Where to use them?
 - FIFOS which you want to use when you deliver buffered data from Point A to B
 
 FIFOS:
+---
 - act in First in First out principle (very similar to queues in c  and so on)
 
 ```
