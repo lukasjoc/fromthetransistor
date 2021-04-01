@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -94,8 +95,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/lukasjoc/builds/digilent-xdc/Zybo-Z7-Master.xdc
-set_property used_in_implementation false [get_files /home/lukasjoc/builds/digilent-xdc/Zybo-Z7-Master.xdc]
+read_xdc /home/lukasjoc/fun/fromthetransistor/sv/switch_toggle/switch_toggle.srcs/constrs_1/new/toggle_const.xdc
+set_property used_in_implementation false [get_files /home/lukasjoc/fun/fromthetransistor/sv/switch_toggle/switch_toggle.srcs/constrs_1/new/toggle_const.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
