@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tmp/nvimeO4G4V/399/top.sv" into library work
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol i_btn1, assumed default net type wire [/tmp/nvimeO4G4V/399/top.sv:48]
+INFO: [VRFC 10-311] analyzing module on_btn_led_pwm
+INFO: [VRFC 10-311] analyzing module led_blink
+INFO: [VRFC 10-311] analyzing module led_blink_odd
+INFO: [VRFC 10-311] analyzing module on_sw_led_blink
+INFO: [VRFC 10-311] analyzing module rgb_blink_sw_control
