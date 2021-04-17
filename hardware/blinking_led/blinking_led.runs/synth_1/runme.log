@@ -16,37 +16,39 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 111842
-WARNING: [Synth 8-2611] redeclaration of ansi port o_led is not allowed [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:27]
-WARNING: [Synth 8-1082] o_led was previously declared with a range [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:27]
-WARNING: [Synth 8-2611] redeclaration of ansi port o_led is not allowed [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:38]
-WARNING: [Synth 8-1082] o_led was previously declared with a range [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:38]
-WARNING: [Synth 8-2611] redeclaration of ansi port o_led is not allowed [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:52]
-WARNING: [Synth 8-1082] o_led was previously declared with a range [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:52]
+INFO: [Synth 8-7075] Helper process launched with PID 139106
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2391.066 ; gain = 0.000 ; free physical = 18957 ; free virtual = 25684
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2391.066 ; gain = 0.000 ; free physical = 18788 ; free virtual = 25559
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:5]
-INFO: [Synth 8-6157] synthesizing module 'led_blink' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'led_blink' (1#1) [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:26]
-INFO: [Synth 8-6157] synthesizing module 'led_blink_odd' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:36]
-INFO: [Synth 8-6155] done synthesizing module 'led_blink_odd' (2#1) [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:36]
-INFO: [Synth 8-6157] synthesizing module 'on_sw_led_blink' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:50]
-INFO: [Synth 8-6155] done synthesizing module 'on_sw_led_blink' (3#1) [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:50]
-INFO: [Synth 8-6155] done synthesizing module 'top' (4#1) [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'rgb_blink_sw_control' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:95]
+INFO: [Synth 8-6155] done synthesizing module 'rgb_blink_sw_control' (1#1) [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:95]
+WARNING: [Synth 8-689] width (1) of port connection 'o_led_r' does not match port width (2) of module 'rgb_blink_sw_control' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:24]
+WARNING: [Synth 8-689] width (1) of port connection 'o_led_g' does not match port width (2) of module 'rgb_blink_sw_control' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:25]
+WARNING: [Synth 8-689] width (1) of port connection 'o_led_b' does not match port width (2) of module 'rgb_blink_sw_control' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:26]
+INFO: [Synth 8-6157] synthesizing module 'led_blink' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:50]
+INFO: [Synth 8-6155] done synthesizing module 'led_blink' (2#1) [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:50]
+WARNING: [Synth 8-689] width (1) of port connection 'o_led' does not match port width (2) of module 'led_blink' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:32]
+INFO: [Synth 8-6157] synthesizing module 'led_blink_odd' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:62]
+INFO: [Synth 8-6155] done synthesizing module 'led_blink_odd' (3#1) [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:62]
+WARNING: [Synth 8-689] width (1) of port connection 'o_led' does not match port width (2) of module 'led_blink_odd' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:38]
+INFO: [Synth 8-6157] synthesizing module 'on_sw_led_blink' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:78]
+INFO: [Synth 8-6155] done synthesizing module 'on_sw_led_blink' (4#1) [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:78]
+WARNING: [Synth 8-689] width (1) of port connection 'o_led' does not match port width (2) of module 'on_sw_led_blink' [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:45]
+INFO: [Synth 8-6155] done synthesizing module 'top' (5#1) [/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.srcs/sources_1/new/top.sv:5]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2391.066 ; gain = 0.000 ; free physical = 18996 ; free virtual = 25718
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2391.066 ; gain = 0.000 ; free physical = 18826 ; free virtual = 25597
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2391.066 ; gain = 0.000 ; free physical = 19681 ; free virtual = 26403
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2391.066 ; gain = 0.000 ; free physical = 19565 ; free virtual = 26336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2391.066 ; gain = 0.000 ; free physical = 19681 ; free virtual = 26403
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2391.066 ; gain = 0.000 ; free physical = 19565 ; free virtual = 26336
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2391.066 ; gain = 0.000 ; free physical = 19674 ; free virtual = 26397
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2391.066 ; gain = 0.000 ; free physical = 19554 ; free virtual = 26325
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -57,29 +59,29 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2509.766 ; gain = 0.000 ; free physical = 19649 ; free virtual = 26372
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2516.766 ; gain = 0.000 ; free physical = 19478 ; free virtual = 26249
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2509.766 ; gain = 0.000 ; free physical = 19649 ; free virtual = 26372
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2516.766 ; gain = 0.000 ; free physical = 19478 ; free virtual = 26249
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19721 ; free virtual = 26438
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19544 ; free virtual = 26315
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19721 ; free virtual = 26438
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19544 ; free virtual = 26315
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19724 ; free virtual = 26440
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19547 ; free virtual = 26318
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19715 ; free virtual = 26432
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19537 ; free virtual = 26309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -88,7 +90,10 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input    1 Bit       Adders := 1     
 +---Registers : 
-	                1 Bit    Registers := 4     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    2 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -105,25 +110,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19701 ; free virtual = 26421
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19524 ; free virtual = 26298
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19578 ; free virtual = 26298
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19402 ; free virtual = 26177
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19576 ; free virtual = 26297
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19400 ; free virtual = 26175
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19576 ; free virtual = 26296
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19400 ; free virtual = 26175
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -141,37 +146,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19577 ; free virtual = 26297
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19400 ; free virtual = 26175
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19577 ; free virtual = 26297
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19400 ; free virtual = 26175
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19577 ; free virtual = 26297
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19400 ; free virtual = 26175
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19577 ; free virtual = 26297
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19400 ; free virtual = 26175
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19577 ; free virtual = 26297
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19400 ; free virtual = 26175
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19577 ; free virtual = 26297
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19400 ; free virtual = 26175
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -188,33 +193,33 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    21|
-|3     |LUT1   |     5|
-|4     |FDRE   |    79|
-|5     |IBUF   |     2|
-|6     |OBUF   |     3|
-|7     |OBUFT  |     4|
+|2     |CARRY4 |    42|
+|3     |LUT1   |    11|
+|4     |FDRE   |   160|
+|5     |IBUF   |     5|
+|6     |OBUF   |     6|
+|7     |OBUFT  |     1|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19577 ; free virtual = 26297
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19400 ; free virtual = 26175
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2509.766 ; gain = 0.000 ; free physical = 19635 ; free virtual = 26355
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2509.766 ; gain = 118.699 ; free physical = 19635 ; free virtual = 26355
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2516.766 ; gain = 0.000 ; free physical = 19458 ; free virtual = 26232
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2516.766 ; gain = 125.699 ; free physical = 19458 ; free virtual = 26232
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2509.766 ; gain = 0.000 ; free physical = 19718 ; free virtual = 26439
-INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2516.766 ; gain = 0.000 ; free physical = 19541 ; free virtual = 26316
+INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2509.766 ; gain = 0.000 ; free physical = 19661 ; free virtual = 26382
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2516.766 ; gain = 0.000 ; free physical = 19486 ; free virtual = 26261
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+25 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2509.766 ; gain = 118.781 ; free physical = 19805 ; free virtual = 26525
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 2516.766 ; gain = 125.781 ; free physical = 19629 ; free virtual = 26403
 INFO: [Common 17-1381] The checkpoint '/home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 17 16:38:51 2021...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 17 18:04:53 2021...

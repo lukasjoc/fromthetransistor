@@ -4,38 +4,66 @@
 // all turned on led blinks in red green and blue and so on
 module top(
     input
-        i_clk, // the clock
-        i_sw0, i_sw1, i_sw2, i_sw3, // all users switches
+        // the main clock
+        i_clk,
+         // all users switches
+        i_sw0, i_sw1, i_sw2, i_sw3,
     output
-        o_led0, o_led1, o_led2, o_led3, // all user leds
-        o_led_r, o_led_g, o_led_b // one rgb led
+        // all user leds
+        o_led0, o_led1, o_led2, o_led3,
+        // one rgb user led
+        o_led_r, o_led_g, o_led_b
     );
    
-// rgb_blink_sw_control inst_rgb_blink_sw_control(
-//      i_clk,
-//      i_sw0, i_sw1, i_sw2,
-//      i_led_r, i_led_g, i_led_b
-// );
+    // blinking rgb led with switches
+    rgb_blink_sw_control inst_rgb_blink_sw_control(
+        .i_clk(i_clk),
+        .i_sw_r(i_sw0),
+        .i_sw_g(i_sw1),
+        .i_sw_b(i_sw2),
+        .o_led_r(o_led_r),
+        .o_led_g(o_led_g),
+        .o_led_b(o_led_b)
+    );
 
-    led_blink inst_led_blink(i_clk, o_led1);
-    led_blink_odd led_blink_odd(i_clk, o_led2);
-    on_sw_led_blink inst_on_sw_led_blink(i_clk, i_sw3, o_led3);
+    // just blinking
+    led_blink inst_led_blink(
+        .i_clk(i_clk),
+        .o_led(o_led1)
+    );
+    
+    // blinking at odd states
+    led_blink_odd inst_led_blink_odd(
+        .i_clk(i_clk),
+        .o_led(o_led2)
+    );
+    
+    // blinking if switch is turned on
+    on_sw_led_blink inst_on_sw_led_blink(
+        .i_clk(i_clk),
+        .i_sw(i_sw3),
+        .o_led(o_led3)
+    );
 endmodule
 
 // just blink at 2^24 around every third of a second
-module led_blink(input i_clk, output [1:0]o_led );
-reg o_led = 1'b1;
-reg [31:0]cnt;
+module led_blink(
+    input i_clk,
+    output reg [1:0] o_led = 1'b1
+);
+reg [31:0] cnt;
 always @(posedge i_clk ) begin
     cnt <= cnt +1'b1;
     o_led <= cnt[24];
 end
 endmodule
 
-// blink at odd posedges
-module led_blink_odd(input i_clk, output [1:0]o_led );
+// blink at odd states
+module led_blink_odd(
+    input i_clk,
+    output reg [1:0] o_led = 1'b0 
+    );
 reg [31:0] cnt;
-reg o_led = 1'b0;
 reg state = 1'b0;
 always @(posedge i_clk) begin
     state <= state + 1'b1;
@@ -46,26 +74,58 @@ always @(posedge i_clk) begin
 end
 endmodule
 
-// blink if switch is on
-module on_sw_led_blink(input i_clk, i_sw, output [1:0]o_led );
-reg [32:0] cnt;
-reg o_led = 1'b0;
+// blinking if switch is turned on
+module on_sw_led_blink(
+    input i_clk, i_sw,
+    output reg [1:0] o_led = 1'b0
+    );
+reg [31:0] cnt;
 always @(posedge i_clk) begin
     if(i_sw) begin 
         cnt <= cnt +1'b1;
         o_led <= cnt[24];
     end else begin
-        cnt <= 0;
-        o_led <= 0;
+        cnt <= 1'b0;
+        o_led <= 1'b0;
     end
 end
 endmodule
 
-//module rgb_blink_sw_control(
-//    input
-//        i_clk, i_sw,
-//    output
-//      o_led_r, o_led_g, o_led_b
-//   );
-//endmodule
+// blinking rgb led with switches
+module rgb_blink_sw_control(
+    input i_clk, i_sw_r, i_sw_g, i_sw_b,
+    output
+        reg [1:0]o_led_r = 1'b0,
+        reg [1:0]o_led_g = 1'b0,
+        reg [1:0]o_led_b = 1'b0 
+    );
+reg [31:0] cnt_r;
+reg [31:0] cnt_g;
+reg [31:0] cnt_b;
 
+always @(posedge i_clk) begin
+    if(i_sw_r) begin
+        cnt_r <= cnt_r +1'b1;
+        o_led_r <= cnt_r[24];
+    end else begin
+        cnt_r <= 1'b0;
+        o_led_r <= 1'b0;
+    end
+        
+    if(i_sw_g) begin
+        cnt_g <= cnt_g +1'b1;
+        o_led_g <= cnt_g[25];
+    end else begin
+        cnt_g <= 1'b0;
+        o_led_g <= 1'b0;
+    end
+        
+    if(i_sw_b) begin
+        cnt_b <= cnt_b +1'b1;
+        o_led_b <= cnt_b[26];
+    end else begin
+        cnt_b <= 1'b0;
+        o_led_b <= 1'b0;
+    end
+end
+endmodule
