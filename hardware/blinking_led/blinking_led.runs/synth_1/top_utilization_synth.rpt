@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Sat Apr 17 13:24:21 2021
+| Date         : Sat Apr 17 14:34:58 2021
 | Host         : dabby running 64-bit Ubuntu 20.04.2 LTS
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |    1 |     0 |     53200 | <0.01 |
-|   LUT as Logic          |    1 |     0 |     53200 | <0.01 |
+| Slice LUTs*             |    2 |     0 |     53200 | <0.01 |
+|   LUT as Logic          |    2 |     0 |     53200 | <0.01 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
 | Slice Registers         |   26 |     0 |    106400 |  0.02 |
 |   Register as Flip Flop |   26 |     0 |    106400 |  0.02 |
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    2 |     0 |       125 |  1.60 |
+| Bonded IOB                  |    3 |     0 |       125 |  2.40 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -148,9 +148,9 @@ Table of Contents
 +----------+------+---------------------+
 | FDRE     |   26 |        Flop & Latch |
 | CARRY4   |    7 |          CarryLogic |
+| LUT1     |    2 |                 LUT |
+| IBUF     |    2 |                  IO |
 | OBUF     |    1 |                  IO |
-| LUT1     |    1 |                 LUT |
-| IBUF     |    1 |                  IO |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sat Apr 17 13:24:25 2021
-# Process ID: 36833
+# Start of session at: Sat Apr 17 14:35:02 2021
+# Process ID: 67657
 # Current directory: /home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.runs/impl_1
 # Command line: vivado -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
 # Log file: /home/lukasjoc/fun/fromthetransistor/hardware/blinking_led/blinking_led.runs/impl_1/top.vdi
