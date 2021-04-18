@@ -188,9 +188,30 @@ When to use them?
 - crossing  clock domains
 - DRAM/SRAM/Flash
 
-<!-- TODO:
-  - all that https://www.nandland.com/articles/fpga-101-fpgas-for-beginners.html
-  - MMIO (ALSO UPDATE WIKI ARTICLE FOR THIS IN GERMAN)
+
+UART(Universal Asynchrinous reveiver-transmitter):
+---
+- transport bytes serially and asynchonously
+- UART is single directional (only half duplex is supported)
+- for full duplex support one must consider using SPI or I2C
+
+```
+UART Interface Definition:
+---
+Baud Rate / Transmission Rate            (9600, 19200, 115200, others)
+Number of Data Bits  (7, 8)
+Parity Bit           (On, Off)
+Stop Bits            (0, 1, 2)
+Flow Control         (None, On, Hardware)
+--
+```
+
+JTAG (Joint Test Action Group):
+---
+- Used to access debugging and programming capabilities of an fpga (4-wire JTAG communications protocol)
+- But its much [more](https://www.xjtag.com/about-jtag/what-is-jtag/)
+
+<!-- RESEARCH LATER:
   - De Morgans Law
   - Karnaugh Maps
   - The Quine-McCluskey method
@@ -198,9 +219,11 @@ When to use them?
 
 Links:
 - [Flip- Flop](http://hyperphysics.phy-astr.gsu.edu/hbase/Electronic//flipflop.html)
-- De Morgan's Law
+<!-- - De Morgan's Law
 - Karnaugh Maps
-- The Quine-McCluskey method
+-The Quine-McCluskey method -->
 - [Combinational logic](https://en.wikipedia.org/wiki/Combinational_logic)
 - [Sequential logic](https://en.wikipedia.org/wiki/Sequential_logic)
 - [NandGame](https://www.nandgame.com/#)
+- [SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface), [Quad-SPI](https://embeddedinventor.com/quad-spi-everything-you-need-to-know/)
+- [I2C](https://en.wikipedia.org/wiki/I%C2%B2C)
